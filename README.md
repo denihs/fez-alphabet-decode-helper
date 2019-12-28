@@ -1,4 +1,4 @@
-**Fez Decoder Helper**
+#Fez Decoder Helper#
 
 This is a simple decode helper to whom want to crack the codes in the Fez's runes faster
 
