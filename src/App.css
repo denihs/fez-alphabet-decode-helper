@@ -1,11 +1,26 @@
 body {
   font-family: 'Press Start 2P', cursive;
-  font-weight: 300;
-  -webkit-text-size-adjust: 100%;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+a {
+  color: black;
+}
+
+footer {
+  text-align: end;
+  margin: 5px;
 }
 
 .App-logo {
@@ -72,6 +87,15 @@ body {
   display: flex;
   flex-direction: column;
   align-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .answer-content {
+    padding: 0 50px;
+  }
 }
 
 @keyframes App-logo-spin {
