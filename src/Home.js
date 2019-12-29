@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useState} from "react";
 import { AlphabetType } from "./homeHelper";
 import BackSpace from "./backspace-24px.svg";
 import Space from "./keyboard-space.png";
@@ -30,10 +30,6 @@ export const Home = () => {
     const lettersType = AlphabetType.getLettersType();
     const [word, setWord] = useState("");
     const [lastTyped, setLastTyped] = useState("");
-
-    useEffect(() => {
-
-    }, [word]);
 
     const handleClick = (alpha) => {
         setWord(`${word} ${alpha}`);
