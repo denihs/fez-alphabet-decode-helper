@@ -1,6 +1,6 @@
 # Fez Decoder Helper
 
-This is a simple decode helper to whom want to crack the codes in the Fez's runes faster
+This is a simple decode helper to whom want to crack the codes in the Fez's runes faster. [click here to see](https://www.fezdecoderhelper.online)
 
 If you want to run locally just type on terminal:
    * `yarn install`

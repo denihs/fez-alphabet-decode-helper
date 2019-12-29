@@ -96,6 +96,9 @@ footer {
   .answer-content {
     padding: 0 50px;
   }
+  .answer-content-word {
+    padding: 0 5px;
+  }
 }
 
 @keyframes App-logo-spin {
