@@ -35,6 +35,7 @@ import R from "./images/R.jpg";
 import S from "./images/S.jpg";
 import T from "./images/T.jpg";
 import U from "./images/U.jpg";
+import V from "./images/V.jpg";
 import W from "./images/W.jpg";
 import X from "./images/X.jpg";
 import Y from "./images/Y.jpg";
@@ -44,7 +45,7 @@ export const NUMBER_TYPE = "NUMBER";
 export const LETTER_TYPE = "LETTER";
 
 const images = {
-    A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, W, X, Y, Z
+    A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 };
 
 const alphabet = {

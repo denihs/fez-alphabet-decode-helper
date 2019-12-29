@@ -1,23 +1,27 @@
-import React, { Fragment, useState } from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import { AlphabetType } from "./homeHelper";
 import BackSpace from "./backspace-24px.svg";
 import Space from "./keyboard-space.png";
 import DeleteAll from "./delete_sweep-24px.svg";
 
 const Infos = ({ handleClick, values, grid, lastTyped }) => (
-        values.map(({ img, alt, representation }, idx) => (
-            <Fragment key={alt}>
-                <img
-                    onClick={() => handleClick(representation)}
-                    src={img}
-                    alt={alt}
-                    className={
-                        `icon ${lastTyped === representation ? "last-typed" : ""}`
-                    }
-                />
-                {(idx + 1) % grid === 0 ? <div /> : null}
-            </Fragment>
-        ))
+    <div className="container-infos">
+        <div className="content-infos">
+            {values.map(({ img, alt, representation }, idx) => (
+                <Fragment key={alt}>
+                    <img
+                        onClick={() => handleClick(representation)}
+                        src={img}
+                        alt={alt}
+                        className={
+                            `icon ${lastTyped === representation ? "last-typed" : ""}`
+                        }
+                    />
+                    {(idx + 1) % grid === 0 ? <div /> : null}
+                </Fragment>
+            ))}
+        </div>
+    </div>
     )
 ;
 
@@ -27,12 +31,16 @@ export const Home = () => {
     const [word, setWord] = useState("");
     const [lastTyped, setLastTyped] = useState("");
 
+    useEffect(() => {
+
+    }, [word]);
+
     const handleClick = (alpha) => {
         setWord(`${word} ${alpha}`);
         setLastTyped(alpha);
     };
 
-    const spaceCharacter = "_";
+    const spaceCharacter = "-";
 
     return (
         <div className="home">
@@ -74,6 +82,7 @@ export const Home = () => {
                         alt="back-space"
                         onClick={() => {
                             setWord(word.slice(0, word.length - 2));
+                            setLastTyped(word[word.length - 3]);
                         }}
                     />
                     <img
@@ -82,6 +91,7 @@ export const Home = () => {
                         alt="DeleteAll"
                         onClick={() => {
                             setWord("");
+                            setLastTyped("");
                         }}
                     />
                 </div>
